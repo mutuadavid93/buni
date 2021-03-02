@@ -1,87 +1,13 @@
+import Button from "../UI/Button";
+
 export default function Home() {
   return (
     <>
-      {/* <!-- mobile_nav --> */}
-      <div id="mobile_nav">
-        <div class="nav-scroller">
-          <nav>
-            <ul>
-              <li>
-                <a href="#" class="btn-nav">
-                  Start A New Project
-                </a>
-              </li>
-              <li>
-                <a href="discover.html">Discover APIs</a>
-              </li>
-              <li>
-                <a href="#">Docs</a>
-              </li>
-              <li>
-                <a href="support.html">Support</a>
-              </li>
-              <li>
-                <a href="#">Buni Community</a>
-              </li>
-              <li class="login-links">
-                <a href="#">Login</a>
-                <a href="#">Sign Up</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      {/* <!-- mobile_nav end --> */}
-
-      {/* <!-- header --> */}
-      <header>
-        {/* <!-- logo -->	 */}
-        <a href="index.html" class="logo-wrapper">
-          <span class="logo">
-            <img src="/images/logo.svg" width="178" height="59" alt="KCB" />
-          </span>
-          <span class="logo-text">BUNI</span>
-        </a>
-        {/* <!-- logo end --> */}
-
-        {/* <!-- main_nav --> */}
-        <nav id="main_nav">
-          <a href="#" class="btn-nav">
-            Start A New Project
-          </a>
-          <a href="discover.html">Discover APIs</a>
-          <a href="#">Docs</a>
-          <a href="support.html">Support</a>
-          <a href="#">Buni Community</a>
-        </nav>
-        {/* <!-- main_nav end --> */}
-
-        {/* <!-- secondary_nav --> */}
-        <nav id="secondary_nav">
-          <a href="#">Login</a>
-          <a href="#">Sign Up</a>
-        </nav>
-        {/* <!-- secondary_nav end --> */}
-
-        <div class="navigation-hamburger">
-          <div class="bar-wrap">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-            <div class="bar bar3"></div>
-          </div>
-          <div class="cross-wrap">
-            <div class="cross-line cross-line1"></div>
-            <div class="cross-line cross-line2"></div>
-          </div>
-        </div>
-      </header>
-      {/* <!-- header end --> */}
-
       {/* <!-- welcome-section --> */}
-      <section class="content-wrapper welcome-section">
-        <div class="wrapper">
-          <div class="col">
-            <h1 class="section-title">
+      <section className="content-wrapper welcome-section">
+        <div className="wrapper">
+          <div className="col">
+            <h1 className="section-title">
               Welcome to <br />
               Buni API Portal
             </h1>
@@ -92,26 +18,26 @@ export default function Home() {
               unified payment system onto your website or app, allowing
               customers to easily pay for your product or service.
             </p>
-            <a href="#" class="primary-btn">
-              Learn More
-            </a>
+            <Button link="#" classname="primary-btn" title="Learn More" />
           </div>
         </div>
       </section>
       {/* <!-- welcome-section end --> */}
 
       {/* <!-- home-slider-section --> */}
-      <section class="content-wrapper home-slider-section">
-        <div class="wrapper">
-          <h2 class="section-title secondary text-center">
+      <section className="content-wrapper home-slider-section">
+        <div className="wrapper">
+          <h2 className="section-title secondary text-center">
             What Makes Buni Awesome
           </h2>
 
           {/* <!-- home-slider --> */}
-          <div class="home-slider owl-carousel">
-            <div class="item">
-              <div class="col left">
-                <h3 class="section-title small">Buni Speaks your Language</h3>
+          <div className="home-slider owl-carousel">
+            <div className="item">
+              <div className="col left">
+                <h3 className="section-title small">
+                  Buni Speaks your Language
+                </h3>
                 <p>
                   Buni speaks many languages. BuniAPIs are pre-integrated into
                   the financial, identity, credit and payment systems across
@@ -119,19 +45,17 @@ export default function Home() {
                   business in multiple countries as though you were actually
                   there.
                 </p>
-                <a href="#" class="primary-btn">
-                  View Docs
-                </a>
+                <Button link="#" title="View Docs" />
               </div>
               <div
-                class="col right"
-                style={{ backgroundImage: "url('/images/slider-pic-1.png');" }}
+                className="col right"
+                style={{ backgroundImage: "url('/images/slider-pic-1.png')" }}
               >
                 {/* <!-- code-wrapper --> */}
-                <div class="code-wrapper">
-                  <div class="code-header">
-                    <div class="tabs">
-                      <a href="#curl" class="active">
+                <div className="code-wrapper">
+                  <div className="code-header">
+                    <div className="tabs">
+                      <a href="#curl" className="active">
                         Curl
                       </a>
                       <a href="#python">Python</a>
@@ -139,9 +63,9 @@ export default function Home() {
                       <a href="#ruby">Ruby</a>
                     </div>
                   </div>
-                  <div class="content">
-                    <div id="curl" class="tab-content active">
-                      <h4 class="title">curl</h4>
+                  <div className="content">
+                    <div id="curl" className="tab-content active">
+                      <h4 className="title">curl</h4>
                       <p>
                         <span>—request</span> POST \<br />
                         <span>—url</span>{" "}
@@ -152,8 +76,8 @@ export default function Home() {
                         <span>—header</span> ‘content-type: Content-Type’
                       </p>
                     </div>
-                    <div id="python" class="tab-content">
-                      <h4 class="title">python</h4>
+                    <div id="python" className="tab-content">
+                      <h4 className="title">python</h4>
                       <p>
                         <span>—request</span> POST \<br />
                         <span>—url</span>{" "}
@@ -164,8 +88,8 @@ export default function Home() {
                         <span>—header</span> ‘content-type: Content-Type’
                       </p>
                     </div>
-                    <div id="js" class="tab-content">
-                      <h4 class="title">javascript</h4>
+                    <div id="js" className="tab-content">
+                      <h4 className="title">javascript</h4>
                       <p>
                         <span>—request</span> POST \<br />
                         <span>—url</span>{" "}
@@ -176,8 +100,8 @@ export default function Home() {
                         <span>—header</span> ‘content-type: Content-Type’
                       </p>
                     </div>
-                    <div id="ruby" class="tab-content">
-                      <h4 class="title">ruby</h4>
+                    <div id="ruby" className="tab-content">
+                      <h4 className="title">ruby</h4>
                       <p>
                         <span>—request</span> POST \<br />
                         <span>—url</span>{" "}
@@ -189,14 +113,16 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div class="code-footer"></div>
+                  <div className="code-footer" />
                 </div>
                 {/* <!-- code-wrapper end --> */}
               </div>
             </div>
-            <div class="item">
-              <div class="col left">
-                <h3 class="section-title small">Buni Speaks your Language</h3>
+            <div className="item">
+              <div className="col left">
+                <h3 className="section-title small">
+                  Buni Speaks your Language
+                </h3>
                 <p>
                   Buni speaks many languages. BuniAPIs are pre-integrated into
                   the financial, identity, credit and payment systems across
@@ -204,18 +130,18 @@ export default function Home() {
                   business in multiple countries as though you were actually
                   there.
                 </p>
-                <a href="#" class="primary-btn">
-                  View Docs
-                </a>
+                <Button link="#" />
               </div>
               <div
-                class="col right"
-                style={{ backgroundImage: "url('/images/slider-pic-1.png');" }}
-              ></div>
+                className="col right"
+                style={{ backgroundImage: "url('/images/slider-pic-1.png')" }}
+              />
             </div>
-            <div class="item">
-              <div class="col left">
-                <h3 class="section-title small">Buni Speaks your Language</h3>
+            <div className="item">
+              <div className="col left">
+                <h3 className="section-title small">
+                  Buni Speaks your Language
+                </h3>
                 <p>
                   Buni speaks many languages. BuniAPIs are pre-integrated into
                   the financial, identity, credit and payment systems across
@@ -223,19 +149,17 @@ export default function Home() {
                   business in multiple countries as though you were actually
                   there.
                 </p>
-                <a href="#" class="primary-btn">
-                  View Docs
-                </a>
+                <Button link="#" />
               </div>
               <div
-                class="col right"
-                style={{ backgroundImage: "url('/images/slider-pic-1.png');" }}
-              ></div>
+                className="col right"
+                style={{ backgroundImage: "url('/images/slider-pic-1.png')" }}
+              />
             </div>
           </div>
           {/* <!-- home-slider end --> */}
 
-          <div class="slider-dotted-line">
+          <div className="slider-dotted-line">
             <img
               src="/images/slider-dotted-line.png"
               width="556"
@@ -244,23 +168,22 @@ export default function Home() {
             />
           </div>
         </div>
-        <div class="leaf-1">
+        <div className="leaf-1">
           <img src="/images/leaves-1.svg" width="245" height="316" alt="Leaf" />
         </div>
       </section>
       {/* <!-- home-slider-section end --> */}
 
       {/* <!-- start-project-section --> */}
-      <section class="content-wrapper project-section">
-        <div class="wrapper">
-          <div class="col">
-            <h2 class="section-title secondary">
+      <section className="content-wrapper project-section">
+        <div className="wrapper">
+          <div className="col">
+            <h2 className="section-title secondary">
               Ready to build something amazing?
             </h2>
-            <a href="#" class="primary-btn">
-              Start A New Project
-            </a>
-            <div class="project-dotted-line">
+            <Button link="#" title="Start A New Project" />
+
+            <div className="project-dotted-line">
               <img
                 src="/images/project-dotted-line.png"
                 width="588"
@@ -270,72 +193,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="leaf-1">
+        <div className="leaf-1">
           <img src="/images/leaves-1.svg" width="245" height="316" alt="Leaf" />
         </div>
-        <div class="leaf-2">
+        <div className="leaf-2">
           <img src="/images/leaves-2.svg" width="379" height="424" alt="Leaf" />
         </div>
       </section>
       {/* <!-- start-project-section end --> */}
-
-      {/* <!-- footer --> */}
-      <footer>
-        {/* <!-- links-section --> */}
-        <div class="links-section">
-          <div class="wrapper">
-            <div class="footer-links">
-              <div class="links-block">
-                <h3>Discover APIs</h3>
-                <ul>
-                  <li>
-                    <a href="#">Send Money</a>
-                  </li>
-                  <li>
-                    <a href="#">Receive Payments</a>
-                  </li>
-                  <li>
-                    <a href="#">Credit (Loans)</a>
-                  </li>
-                  <li>
-                    <a href="#">Account Services</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="links-block">
-                <h3>Resources</h3>
-                <ul>
-                  <li>
-                    <a href="#">FAQs</a>
-                  </li>
-                  <li>
-                    <a href="#">Support</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy Policy &amp; Terms</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <!-- links-section end --> */}
-
-        {/* <!-- copyright-section --> */}
-        <div class="copyright-section">
-          <div class="wrapper">
-            <span>
-              Regulated by the Central Bank of Kenya
-              <span class="copyright">&copy; KCB BUNI 2021</span>
-            </span>
-          </div>
-        </div>
-        {/* <!-- copyright-section end --> */}
-      </footer>
-      {/* <!-- footer end --> */}
     </>
   );
 }

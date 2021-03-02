@@ -92,8 +92,6 @@ export default function Header() {
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&asmpdisplay=swap"
         rel="stylesheet"
       />
-      <link rel="stylesheet" type="text/css" href="css/plugins.css" />
-      <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </Head>
   );
 }

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faqs_details",
+  "info": {
+    "name": "faqs_details"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "richtext"
+    },
+    "faq_category": {
+      "model": "faqs",
+      "via": "faqs_details"
+    }
+  }
+}

@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import Link from "next/link";
+
 export default function MobileNavBar() {
   return (
     <div id="mobile_nav">
@@ -10,13 +13,17 @@ export default function MobileNavBar() {
               </a>
             </li>
             <li>
-              <a href="discover.html">Discover APIs</a>
+              <Link href="/discover">
+                <a>Discover APIs</a>
+              </Link>
             </li>
             <li>
               <a href="#/">Docs</a>
             </li>
             <li>
-              <a href="support.html">Support</a>
+              <Link href="/support">
+                <a>Support</a>
+              </Link>
             </li>
             <li>
               <a href="#/">Buni Community</a>

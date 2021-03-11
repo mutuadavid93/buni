@@ -1,13 +1,17 @@
 {
   "name": "microsite",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.14.0",
+    "npm": "6.13.4"
+  },
   "private": true,
   "pre-commit": [
     "lint"
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "eslint ./components/**/*.js ./hoc/**/*.js ./pages/**/*.js -c .eslintrc.json --fix"
   },

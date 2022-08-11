@@ -1,37 +1,29 @@
 <template>
   <div>
-    <home-page-welcome />
-    <home-page-what-buni-can-do />
-    <home-page-why-buni />
-    <home-page-buni-as-partner />
+    <home-page-welcome :welcomeData="welcomeData" />
+    <home-page-what-buni-can-do :buniDefinition="buniDefinition" />
+    <home-page-why-buni :buniPurpose="buniPurpose" />
+    <home-page-buni-as-partner :buniPartner="buniPartner" />
 
     <!-- Two Cards -->
     <section class="content-wrapper ready-to-innovate-section">
       <div class="wrapper">
         <div class="col-2">
-          <div class="card ready-to-innovate">
+          <div
+            class="card"
+            v-for="usecase in buniUseCases"
+            :key="usecase.id"
+            :class="usecase.button?.classname"
+          >
             <div class="card-content">
-              <h3>Ready <br />to innovate?</h3>
-              <a href="#" class="primary-btn">Let’s get started</a>
+              <div v-html="usecase?.heading" />
+              <a href="#" class="primary-btn">{{ usecase.button?.label }}</a>
             </div>
 
             <div class="card-header">
               <img
-                src="~/assets/images/ready-to-innovate.png"
+                :src="$config.baseUrl + '' + usecase.image.data.attributes?.url"
                 alt="Ready to innovate?"
-              />
-            </div>
-          </div>
-          <div class="card use-cases">
-            <div class="card-content">
-              <h3>Check out <br />our use cases.</h3>
-              <a href="#" class="primary-btn">Explore</a>
-            </div>
-
-            <div class="card-header">
-              <img
-                src="~/assets/images/check-out-our-cases.png"
-                alt="Check out our use cases"
               />
             </div>
           </div>
@@ -42,7 +34,37 @@
 </template>
 
 <script setup>
-//
-</script>
+import { computed } from "vue";
+const { data } = await useAsyncData("homepagesections", () =>
+  GqlHomepagesections()
+);
 
-<style lang="scss" scoped></style>
+const getSection = ({ payload, name }) => {
+  return payload.find((item) => item.attributes?.slug == name).attributes;
+};
+
+// Note:: setup can be ran beforeCreate() and created() hooks thus code which can run inside
+// those hooks can be placed here anyways.
+const payload = data.value.homePageBodies?.data;
+
+// Computed Properties
+const welcomeData = computed(
+  () => getSection({ payload, name: "welcome" })?.section[0]
+);
+
+const buniDefinition = computed(
+  () => getSection({ payload, name: "what-can-buni-do" })?.section
+);
+
+const buniPurpose = computed(
+  () => getSection({ payload, name: "why-buni" })?.section
+);
+
+const buniPartner = computed(
+  () => getSection({ payload, name: "best-partner" })?.section
+);
+
+const buniUseCases = computed(
+  () => getSection({ payload, name: "use-buni" })?.section
+);
+</script>

@@ -2,25 +2,19 @@
   <section
     class="content-wrapper discover-apis welcome-section"
     :style="{
-      backgroundImage: `url(${banner})`
+      backgroundImage: `url(${$config.baseUrl}${introduction.image.data.attributes?.url})`
     }"
   >
     <div class="wrapper">
-      <div class="col">
-        <h1 class="section-title">Discover APIs</h1>
-        <p>
-          Innovators and developers are building their next big <br />idea on
-          BUNI. Our APIs offer various financial and non-<br />financial
-          capabilities, integrating your solution to KCB's <br />digital
-          platforms.
-        </p>
-      </div>
+      <div class="col" v-html="introduction?.heading" />
     </div>
   </section>
 </template>
 
 <script setup>
-import banner from "@/assets/images/discover-apis-banner.png";
+defineProps({
+  introduction: Object
+});
 </script>
 
 <style lang="scss" scoped></style>

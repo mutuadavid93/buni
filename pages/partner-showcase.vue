@@ -3,27 +3,33 @@
     <section
       class="content-wrapper discover-apis welcome-section"
       :style="{
-        backgroundImage: `url(${banner})`
+        backgroundImage: `url(${$config.baseUrl}${introduction.image.data.attributes?.url})`
       }"
     >
       <div class="wrapper">
-        <div class="col">
-          <h1 class="section-title">Partner Showcase</h1>
-          <p>
-            Take a look at the various ways in which different business and
-            innovators have used APIs available on Buni to build new solution
-            and deliver digital experiences for their customers.
-          </p>
-        </div>
+        <div class="col" v-html="introduction?.heading" />
       </div>
     </section>
 
-    <PartnerShowcaseContent />
+    <PartnerShowcaseContent :content="content" />
   </div>
 </template>
 
 <script setup>
-import banner from "@/assets/images/partner-showcase.png";
+import { computed } from "vue";
+const { data } = await useAsyncData("partnershowcase", () =>
+  GqlPartnershowcase()
+);
+const getSection = ({ payload, name }) => {
+  return payload.find((item) => item.attributes?.slug == name).attributes;
+};
+const payload = data.value.partnerShowcases?.data;
+const introduction = computed(
+  () => getSection({ payload, name: "introduction" })?.section[0]
+);
+const content = computed(
+  () => getSection({ payload, name: "content" })?.section
+);
 </script>
 
 <style lang="scss" scoped></style>

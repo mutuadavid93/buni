@@ -9,22 +9,22 @@
 <script>
 export default {
   // Layout specific CSS
-  head: {
-    link: [
-      {
-        rel: "stylesheet",
-        href: "site.webmanifest"
-      },
-      {
-        rel: "stylesheet",
-        href: "assets/css/normalize.css"
-      },
-      {
-        rel: "stylesheet",
-        href: "assets/css/main.css"
-      }
-    ]
-  }
+  // head: {
+  //   link: [
+  //     {
+  //       rel: "stylesheet",
+  //       href: "site.webmanifest"
+  //     },
+  //     {
+  //       rel: "stylesheet",
+  //       href: "assets/css/normalize.css"
+  //     },
+  //     {
+  //       rel: "stylesheet",
+  //       href: "assets/css/main.css"
+  //     }
+  //   ]
+  // }
 };
 </script>
 

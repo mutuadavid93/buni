@@ -10,4 +10,5 @@ export default defineNuxtConfig({
       baseUrl: process.env.SERVER_URL
     }
   },
+  css: ["~/assets/css/normalize.css", "~/assets/css/main.css"]
 });

@@ -9,5 +9,5 @@ export default defineNuxtConfig({
       GQL_HOST: process.env.GQL_HOST,
       baseUrl: process.env.SERVER_URL
     }
-  }
+  },
 });

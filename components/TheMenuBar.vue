@@ -17,12 +17,19 @@
     </NuxtLink>
 
     <nav id="main_nav">
-      <a href="/">Getting Started</a>
-      <a href="/discover-apis.html" rel="noreferrer">Discover APIs</a>
-      <a href="/buni-use-cases.html">Buni Use Cases</a>
-      <a href="#">Partner Showcase</a>
-      <a target="_blank" href="#" rel="noreferrer">Docs</a>
-      <a href="/support.html">Support</a>
+      <!-- <a href="/">Getting Started</a> -->
+      <div v-for="link in links" :key="link.id">
+        <a
+          v-if="!!link?.isexternal"
+          :href="link?.href ? link.href : '/'"
+          rel="noreferrer"
+          target="_blank"
+          >{{ link.label }}</a
+        >
+        <NuxtLink v-else :to="link?.href ? link.href : '/'">{{
+          link.label
+        }}</NuxtLink>
+      </div>
       <a target="_blank" href="#" rel="noreferrer" class="btn-nav"
         >Log in/ Sign up</a
       >
@@ -40,3 +47,13 @@
     </div>
   </header>
 </template>
+
+<script setup>
+import { computed } from "vue";
+const { data } = await useAsyncData("mainmenu", () => GqlMainmenu());
+const getSection = ({ payload, name }) => {
+  return payload.find((item) => item.attributes?.slug == name).attributes;
+};
+const payload = data.value.mainNavs?.data;
+const links = computed(() => payload[0].attributes?.link);
+</script>

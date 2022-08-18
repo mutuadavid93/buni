@@ -1,0 +1,15 @@
+query mainmenu {
+  mainNavs {
+    data {
+      attributes {
+        link {
+          id
+          href
+          label
+          isexternal
+          classname
+        }
+      }
+    }
+  }
+}

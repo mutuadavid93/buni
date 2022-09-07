@@ -1,0 +1,35 @@
+# Write your query or mutation here
+mutation contactus(
+  $fname: String
+  $email: String
+  $work: String
+  $phone: String
+  $message: String
+) {
+  createMailbox(
+    data: {
+      full_name: $fname
+      email_address: $email
+      phone_number: $phone
+      work_place: $work
+      message: $message
+    }
+  ) {
+    data {
+      attributes {
+        full_name
+        email_address
+        phone_number
+        work_place
+        message
+      }
+    }
+  }
+}
+
+# Seed
+# {"fname": "Liam McAtansney",
+# "email": "istreetec@gmail.com",
+# "phone": "+254793075641",
+# "work": "Yanga Trybe",
+# "message": "Sample test message"}

@@ -1,0 +1,27 @@
+query support {
+  supports {
+    data {
+      id
+      attributes {
+        slug
+        section {
+          id
+          heading
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+          button {
+            label
+            href
+            classname
+            isexternal
+          }
+        }
+      }
+    }
+  }
+}

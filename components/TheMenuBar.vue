@@ -8,6 +8,34 @@
     <Meta name="theme-color" content="#84BC02" />
   </Head>
 
+  <!-- mobile_nav -->
+  <div id="mobile_nav">
+    <div class="nav-scroller">
+      <nav>
+        <ul>
+          <li v-for="link in links" :key="link.id">
+            <a
+              v-if="!!link?.isexternal"
+              :href="link?.href ? link.href : '/'"
+              rel="noreferrer"
+              target="_blank"
+              >{{ link.label }}</a
+            >
+            <NuxtLink v-else :to="link?.href ? link.href : '/'">{{
+              link.label
+            }}</NuxtLink>
+          </li>
+          <li>
+            <a target="_blank" href="#" rel="noreferrer" class="btn-nav"
+              >Log in/ Sign up</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- mobile_nav end -->
+
   <header>
     <NuxtLink class="logo-wrapper" to="/">
       <span class="logo">

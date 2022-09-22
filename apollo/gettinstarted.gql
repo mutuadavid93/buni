@@ -1,0 +1,25 @@
+query gettinstarted {
+  gettingStarteds {
+    data {
+      id
+      attributes {
+        slug
+        section {
+          id
+          heading
+          image {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+        tabs {
+          id
+          label
+        }
+      }
+    }
+  }
+}

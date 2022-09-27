@@ -5,7 +5,12 @@
       <div class="col-3">
         <app-card :sources="sources" />
       </div>
-      <a href="#" class="primary-btn">VIEW DOCS</a>
+      <a
+        href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+        target="_blank"
+        class="primary-btn"
+        >VIEW DOCS</a
+      >
     </div>
   </section>
 </template>

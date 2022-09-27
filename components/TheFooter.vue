@@ -18,10 +18,14 @@
             <div class="col-2">
               <ul>
                 <li><NuxtLink to="/">FAQs</NuxtLink></li>
-                <li><NuxtLink to="/">Support</NuxtLink></li>
-                <li><NuxtLink to="/">Contact Us</NuxtLink></li>
+                <li><NuxtLink to="/support">Support</NuxtLink></li>
+                <li><NuxtLink to="/contact-us">Contact Us</NuxtLink></li>
                 <li>
-                  <NuxtLink to="/">Privacy Policy &amp; Terms</NuxtLink>
+                  <a
+                    href="https://ke.kcbgroup.com/terms-condition"
+                    target="_blank"
+                    >Privacy Policy &amp; Terms</a
+                  >
                 </li>
               </ul>
 
@@ -33,7 +37,13 @@
                   <NuxtLink to="/partner-showcase">Partner Showcase</NuxtLink>
                 </li>
                 <li><NuxtLink to="/">Forum</NuxtLink></li>
-                <li><NuxtLink to="/">Docs</NuxtLink></li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+                    >Docs</a
+                  >
+                </li>
               </ul>
             </div>
           </div>

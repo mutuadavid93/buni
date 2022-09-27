@@ -8,7 +8,11 @@
     <div class="wrapper">
       <div class="col">
         <div v-html="data?.heading" />
-        <a href="#" class="primary-btn">{{ data.button?.label }}</a>
+        <NuxtLink
+          :to="data.button?.href ? data.button?.href : '/'"
+          class="primary-btn"
+          >{{ data.button?.label }}</NuxtLink
+        >
       </div>
     </div>
   </section>

@@ -17,7 +17,11 @@
           >
             <div class="card-content">
               <div v-html="usecase?.heading" />
-              <a href="#" class="primary-btn">{{ usecase.button?.label }}</a>
+              <a
+                :href="usecase.button?.href ? usecase.button?.href : '#'"
+                class="primary-btn"
+                >{{ usecase.button?.label }}</a
+              >
             </div>
 
             <div class="card-header">

@@ -9,7 +9,11 @@
       <div class="wrapper">
         <div class="col">
           <div v-html="introduction?.heading" />
-          <a href="#" class="primary-btn">{{ introduction.button?.label }}</a>
+          <a
+            :href="introduction.button?.href ? introduction.button?.href : '#'"
+            class="primary-btn"
+            >{{ introduction.button?.label }}</a
+          >
         </div>
       </div>
     </section>

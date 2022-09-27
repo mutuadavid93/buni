@@ -10,7 +10,12 @@
       <div class="card-content">
         <div v-html="api?.heading" />
         <div class="col">
-          <a href="#" class="primary-btn">{{ api.button?.label }}</a>
+          <a
+            target="_blank"
+            :href="api.button?.href ? api.button?.href : '#'"
+            class="primary-btn"
+            >{{ api.button?.label }}</a
+          >
         </div>
       </div>
     </div>

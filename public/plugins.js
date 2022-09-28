@@ -118,3 +118,5 @@
   // add to global namespace
   window.CBPFWTabs = CBPFWTabs;
 })(window);
+
+new CBPFWTabs(document.getElementById("tabs"));

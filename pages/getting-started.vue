@@ -279,7 +279,8 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, watch } from "vue";
+
 useHead({
   script: [
     {
@@ -289,13 +290,19 @@ useHead({
     {
       src: "plugins.js",
       body: true
-    },
-    {
-      src: "main.js",
-      body: true
     }
+    // {
+    //   src: "main.js",
+    //   body: true
+    // }
   ]
 });
+// const route = useRoute();
+
+// Detect Route Change
+// watch(route, (n, o) => {
+//   console.log(n, o);
+// });
 
 const { data } = await useAsyncData("gettinstarted", () => GqlGettinstarted());
 const getSection = ({ payload, name }) => {

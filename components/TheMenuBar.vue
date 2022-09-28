@@ -21,9 +21,12 @@
               target="_blank"
               >{{ link.label }}</a
             >
-            <NuxtLink v-else :to="link?.href ? link.href : '/'">{{
-              link.label
-            }}</NuxtLink>
+            <NuxtLink
+              @click.native="toggleMenu"
+              v-else
+              :to="link?.href ? link.href : '/'"
+              >{{ link.label }}</NuxtLink
+            >
           </li>
           <li>
             <a target="_blank" href="#" rel="noreferrer" class="btn-nav"
@@ -62,7 +65,11 @@
         >Log in/ Sign up</a
       >
     </nav>
-    <div class="navigation-hamburger -close">
+    <div
+      class="navigation-hamburger -close"
+      @click.prevent="toggleMenu"
+      ref="hamburger"
+    >
       <div class="bar-wrap">
         <div class="bar bar1"></div>
         <div class="bar bar2"></div>
@@ -78,10 +85,31 @@
 
 <script setup>
 import { computed } from "vue";
+const bodyClass = ref("");
+const hamburger = ref(null);
+useHead({
+  bodyAttrs: {
+    class: bodyClass
+  }
+});
 const { data } = await useAsyncData("mainmenu", () => GqlMainmenu());
 const getSection = ({ payload, name }) => {
   return payload.find((item) => item.attributes?.slug == name).attributes;
 };
 const payload = data.value.mainNavs?.data;
 const links = computed(() => payload[0].attributes?.link);
+
+const toggleMenu = ($event) => {
+  const menu = hamburger.value;
+  const isOpen = menu.classList.contains("-open");
+  if (isOpen) {
+    menu.classList.remove("-open");
+    menu.classList.add("-close");
+    bodyClass.value = "";
+  } else {
+    menu.classList.remove("-close");
+    menu.classList.add("-open");
+    bodyClass.value = "menu-open";
+  }
+};
 </script>

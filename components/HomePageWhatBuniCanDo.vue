@@ -13,7 +13,18 @@
           </div>
           <div class="card-content">
             <div class="card-content-details" v-html="source?.heading" />
-            <a href="#" class="primary-btn">{{ source.button?.label }}</a>
+            <a
+              v-if="!!source.button?.isxternal"
+              :href="source.button?.href ? source.button?.href : '/'"
+              class="primary-btn"
+              >{{ source.button?.label }}</a
+            >
+            <NuxtLink
+              v-else
+              :to="source.button?.href ? source.button?.href : '/'"
+              class="primary-btn"
+              >{{ source.button?.label }}</NuxtLink
+            >
           </div>
         </div>
       </div>

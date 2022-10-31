@@ -29,7 +29,11 @@
             >
           </li>
           <li>
-            <a target="_blank" href="#" rel="noreferrer" class="btn-nav"
+            <a
+              target="_blank"
+              href="https://sandbox.buni.kcbgroup.com/devportal/services/configs"
+              rel="noreferrer"
+              class="btn-nav"
               >Log in/ Sign up</a
             >
           </li>
@@ -61,7 +65,11 @@
           link.label
         }}</NuxtLink>
       </div>
-      <a target="_blank" href="#" rel="noreferrer" class="btn-nav"
+      <a
+        target="_blank"
+        href="https://sandbox.buni.kcbgroup.com/devportal/services/configs"
+        rel="noreferrer"
+        class="btn-nav"
         >Log in/ Sign up</a
       >
     </nav>

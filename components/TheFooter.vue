@@ -7,26 +7,52 @@
           <div class="links-block">
             <h3>Discover APIs</h3>
             <ul>
-              <li><NuxtLink to="/">Send Money</NuxtLink></li>
-              <li><NuxtLink to="/">Receive Payments</NuxtLink></li>
-              <li><NuxtLink to="/">Account Services</NuxtLink></li>
-              <li><NuxtLink to="/">Open Ecosystem</NuxtLink></li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+                  >Send Money</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+                  >Receive Payments</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+                  >Account Services</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+                  >Open Ecosystem</a
+                >
+              </li>
             </ul>
           </div>
           <div class="links-block">
             <h3>Resources</h3>
             <div class="col-2">
               <ul>
-                <li><NuxtLink to="/">FAQs</NuxtLink></li>
-                <li><NuxtLink to="/support">Support</NuxtLink></li>
-                <li><NuxtLink to="/contact-us">Contact Us</NuxtLink></li>
                 <li>
                   <a
-                    href="https://ke.kcbgroup.com/terms-condition"
                     target="_blank"
-                    >Privacy Policy &amp; Terms</a
+                    href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+                    >Docs</a
                   >
                 </li>
+                <li><NuxtLink to="/">FAQs</NuxtLink></li>
+                <li><NuxtLink to="/">Forum</NuxtLink></li>
+                <li><NuxtLink to="/contact-us">Support</NuxtLink></li>
+                <!-- <li><NuxtLink to="/contact-us">Contact Us</NuxtLink></li> -->
+                
               </ul>
 
               <ul>
@@ -36,14 +62,15 @@
                 <li>
                   <NuxtLink to="/partner-showcase">Partner Showcase</NuxtLink>
                 </li>
-                <li><NuxtLink to="/">Forum</NuxtLink></li>
+                
                 <li>
                   <a
+                    href="https://ke.kcbgroup.com/terms-condition"
                     target="_blank"
-                    href="https://sandbox.buni.kcbgroup.com/devportal/apis"
-                    >Docs</a
+                    >Privacy Policy &amp; Terms</a
                   >
                 </li>
+
               </ul>
             </div>
           </div>

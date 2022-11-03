@@ -1,0 +1,129 @@
+.tabs-component {
+  text-align: center;
+}
+
+.tabs-component ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.tabs-component li.tabs-component-tab.is-active {
+  background: linear-gradient(0deg, #80bb00 10.69%, #a4ee05 100.25%);
+  z-index: 100;
+}
+
+.tabs-component li.tabs-component-tab {
+  background: linear-gradient(89.97deg, #053c5e 49.95%, #005d80 74.3%);
+  margin: 0 0.25em;
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.tabs-component a {
+  color: #fff;
+  display: block;
+  line-height: 2.5;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 1.25em;
+  white-space: nowrap;
+}
+
+/* Tab Content Styles */
+.tabs-component .tabs-component-panels {
+  background-color: #f1f5f7;
+}
+
+.tabs-component .tabs-component-panels section.tabs-component-panel {
+  font-size: 1.25em;
+  padding: 3em 1em;
+  /* display: none; */
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-header {
+  text-align: center;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-header
+  h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: normal;
+  text-align: center;
+  color: #003d4c;
+  margin: 0;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-header
+  p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #615f5f;
+  margin: 0;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-header
+  a {
+  color: #84bc02 !important;
+  font-weight: 400;
+  font-size: 22px;
+  padding: 0;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-content
+  img {
+  margin: 10px auto;
+  width: auto;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-content
+  h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: normal;
+  color: #80bb00;
+  text-align: left;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-content
+  p.step {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #003d4c;
+  text-align: left;
+}

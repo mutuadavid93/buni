@@ -52,7 +52,6 @@
                 <li><NuxtLink to="/">Forum</NuxtLink></li>
                 <li><NuxtLink to="/contact-us">Support</NuxtLink></li>
                 <!-- <li><NuxtLink to="/contact-us">Contact Us</NuxtLink></li> -->
-                
               </ul>
 
               <ul>
@@ -62,7 +61,7 @@
                 <li>
                   <NuxtLink to="/partner-showcase">Partner Showcase</NuxtLink>
                 </li>
-                
+
                 <li>
                   <a
                     href="https://ke.kcbgroup.com/terms-condition"
@@ -70,7 +69,6 @@
                     >Privacy Policy &amp; Terms</a
                   >
                 </li>
-
               </ul>
             </div>
           </div>
@@ -89,22 +87,38 @@
         >
         <ul>
           <li>
-            <a href="#"><span class="icon-facebook"></span></a>
+            <a href="https://www.facebook.com/kcbgroup/" target="_blank"
+              ><span class="icon-facebook"></span
+            ></a>
           </li>
           <li>
-            <a href="#"><span class="icon-twitter"></span></a>
+            <a href="https://twitter.com/KCBGroup" target="_blank"
+              ><span class="icon-twitter"></span
+            ></a>
           </li>
           <li>
-            <a href="#"><span class="icon-youtube"></span></a>
+            <a
+              href="https://www.youtube.com/channel/UC3REin1loCe8bxtZJClwZ2A"
+              target="_blank"
+              ><span class="icon-youtube"></span
+            ></a>
           </li>
           <li>
-            <a href="#"><span class="icon-instagram"></span></a>
+            <a href="https://www.instagram.com/kcbgroup/" target="_blank"
+              ><span class="icon-instagram"></span
+            ></a>
           </li>
           <li>
-            <a href="#"><span class="icon-linkedin"></span></a>
+            <a
+              href="https://www.linkedin.com/company/kcb-bank-group/"
+              target="_blank"
+              ><span class="icon-linkedin"></span
+            ></a>
           </li>
           <li>
-            <a href="#"><span class="icon-whatsapp"></span></a>
+            <a href="https://wa.me/254711087087" target="_blank"
+              ><span class="icon-whatsapp"></span
+            ></a>
           </li>
         </ul>
       </div>

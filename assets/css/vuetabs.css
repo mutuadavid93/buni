@@ -98,8 +98,16 @@
   section.tabs-component-panel
   .tab-content
   img {
-  margin: 10px auto;
+  /* margin: 10px auto; */
   width: auto;
+}
+
+.tabs-component
+  .tabs-component-panels
+  section.tabs-component-panel
+  .tab-content.login
+  img {
+  margin: 10px auto;
 }
 
 .tabs-component
@@ -126,4 +134,12 @@
   line-height: 26px;
   color: #003d4c;
   text-align: left;
+}
+
+.tab-content p {
+  text-align: left;
+}
+
+.tab-footer a {
+  color: #80bb00;
 }

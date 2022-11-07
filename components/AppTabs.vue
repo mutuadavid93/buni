@@ -7,10 +7,12 @@
           <p>
             To get started, you first need to register on the API gateway here
           </p>
-          <a href="#">https://sandbox.buni.kcbgroup.com/devportal/apis</a>
+          <a href="https://sandbox.buni.kcbgroup.com/devportal/apis"
+            >https://sandbox.buni.kcbgroup.com</a
+          >
         </div>
 
-        <div class="tab-content">
+        <div class="tab-content login">
           <img
             src="~/assets/images/getting-started/login.png"
             width="517"
@@ -82,13 +84,11 @@
             width="1030"
             alt="generate-keys"
           />
-          <ul>
-            <li>
-              You can generate access token and store it for use in subsequent
-              requests.
-            </li>
-            <li>You can also generate a curl request for token generation.</li>
-          </ul>
+          <p>
+            You can generate access token and store it for use in subsequent
+            requests.<br />
+            You can also generate a curl request for token generation.
+          </p>
         </div>
       </section>
     </tab>

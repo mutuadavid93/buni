@@ -49,7 +49,7 @@
                   >
                 </li>
                 <li><NuxtLink to="/">FAQs</NuxtLink></li>
-                <li><NuxtLink to="/">Forum</NuxtLink></li>
+                <li><NuxtLink to="/support">Forum</NuxtLink></li>
                 <li><NuxtLink to="/contact-us">Support</NuxtLink></li>
                 <!-- <li><NuxtLink to="/contact-us">Contact Us</NuxtLink></li> -->
               </ul>

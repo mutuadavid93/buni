@@ -116,4 +116,8 @@ const onSubmit = async (values) => {
 // console.log(nuxt);
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+span.error {
+  color: red;
+}
+</style>

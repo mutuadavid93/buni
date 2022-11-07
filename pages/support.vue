@@ -10,6 +10,7 @@
         <div class="col">
           <div v-html="introduction?.heading" />
           <a
+            target="_blank"
             :href="introduction.button?.href ? introduction.button?.href : '#'"
             class="primary-btn"
             >{{ introduction.button?.label }}</a

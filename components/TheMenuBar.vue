@@ -8,7 +8,6 @@
     <Meta name="theme-color" content="#84BC02" />
   </Head>
 
-  <!-- mobile_nav -->
   <div id="mobile_nav">
     <div class="nav-scroller">
       <nav>
@@ -93,7 +92,6 @@
       </nav>
     </div>
   </div>
-  <!-- mobile_nav end -->
 
   <header>
     <NuxtLink class="logo-wrapper" to="/">
@@ -104,7 +102,6 @@
     </NuxtLink>
 
     <nav id="main_nav">
-      <!-- <a href="/">Getting Started</a> -->
       <div :style="styleDiv" v-for="link in links" :key="link.id">
         <a
           v-if="!!link?.isexternal"

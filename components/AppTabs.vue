@@ -161,7 +161,7 @@
             alt="test-dashboard"
           />
 
-          <ol type="a">
+          <ol type="a" id="steps-to-try-out">
             <li>Select OAuth as the authentication method.</li>
             <li>Select your Application Name from the dropdown.</li>
             <li>Select Sandbox as the Key Type</li>

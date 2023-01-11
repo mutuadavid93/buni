@@ -1,5 +1,9 @@
 {
   "private": true,
+  "engines": {
+    "node": "14.19.1",
+    "npm": "6.14.16"
+  },
   "scripts": {
     "build": "nuxt build",
     "start": "node .output/server/index.mjs",
@@ -8,12 +12,15 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.4"
+    "nuxt": "^3.0.0-rc.14"
+  },
+  "resolutions": {
+    "undici": "5.5.1"
   },
   "dependencies": {
     "@vee-validate/i18n": "^4.6.7",
     "@vee-validate/rules": "^4.6.7",
-    "nuxt-graphql-client": "^0.1.11",
+    "nuxt-graphql-client": "^0.2.24",
     "vee-validate": "^4.6.7",
     "vue3-tabs-component": "^1.1.1"
   }

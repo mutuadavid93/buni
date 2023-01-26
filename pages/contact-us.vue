@@ -105,7 +105,7 @@ const onSubmit = async (values) => {
       "contactus",
       payload
     );
-    console.log("submitted ...", values);
+    // console.log("submitted ...", values);
     alert("Submitted successfully!");
     // refresh();
   } catch (error) {

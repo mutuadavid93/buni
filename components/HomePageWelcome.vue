@@ -8,7 +8,16 @@
     <div class="wrapper">
       <div class="col">
         <div v-html="data?.heading" />
+
+        <a
+          v-if="!!data.button?.isexternal"
+          target="_blank"
+          :href="data.button?.href ? data.button?.href : '/'"
+          class="primary-btn"
+          >{{ data.button?.label }}</a
+        >
         <NuxtLink
+          v-else
           :to="data.button?.href ? data.button?.href : '/'"
           class="primary-btn"
           >{{ data.button?.label }}</NuxtLink

@@ -18,9 +18,17 @@
             <div class="card-content">
               <div v-html="usecase?.heading" />
               <a
+                v-if="!!usecase.button?.isexternal"
+                target="_blank"
                 :href="usecase.button?.href ? usecase.button?.href : '#'"
                 class="primary-btn"
                 >{{ usecase.button?.label }}</a
+              >
+              <NuxtLink
+                v-else
+                :to="usecase.button?.href ? usecase.button?.href : '/'"
+                class="primary-btn"
+                >{{ usecase.button?.label }}</NuxtLink
               >
             </div>
 

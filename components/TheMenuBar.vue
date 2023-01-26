@@ -149,7 +149,7 @@
               class="dropdown-item"
               @click.native="handleItemClick"
               data-class="faq"
-              to="/"
+              to="/faqs"
               >FAQs</NuxtLink
             >
           </li>

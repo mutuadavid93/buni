@@ -10,10 +10,17 @@
         <div class="col">
           <div v-html="introduction?.heading" />
           <a
+            v-if="!!introduction.button?.isexternal"
             target="_blank"
             :href="introduction.button?.href ? introduction.button?.href : '#'"
             class="primary-btn"
             >{{ introduction.button?.label }}</a
+          >
+          <NuxtLink
+            v-else
+            :to="introduction.button?.href ? introduction.button?.href : '#'"
+            class="primary-btn"
+            >{{ introduction.button?.label }}</NuxtLink
           >
         </div>
       </div>

@@ -11,10 +11,17 @@
         <div v-html="api?.heading" />
         <div class="col">
           <a
+            v-if="!!api.button?.isexternal"
             target="_blank"
             :href="api.button?.href ? api.button?.href : '#'"
             class="primary-btn"
             >{{ api.button?.label }}</a
+          >
+          <NuxtLink
+            v-else
+            :to="api.button?.href ? api.button?.href : '/'"
+            class="primary-btn"
+            >{{ api.button?.label }}</NuxtLink
           >
         </div>
       </div>

@@ -14,7 +14,8 @@
           <div class="card-content">
             <div class="card-content-details" v-html="source?.heading" />
             <a
-              v-if="!!source.button?.isxternal"
+              v-if="!!source.button?.isexternal"
+              target="_blank"
               :href="source.button?.href ? source.button?.href : '/'"
               class="primary-btn"
               >{{ source.button?.label }}</a

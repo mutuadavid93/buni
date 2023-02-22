@@ -82,7 +82,7 @@
       <div class="wrapper">
         <span
           >Regulated by the Central Bank of Kenya<span class="copyright"
-            >&copy; 2022 KCB Buni . All Rights Reserved.</span
+            >&copy; {{ currentyear }} KCB Buni . All Rights Reserved.</span
           ></span
         >
         <ul>
@@ -128,7 +128,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    currentyear() {
+      const d = new Date();
+      let year = d.getFullYear();
+      return year;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>

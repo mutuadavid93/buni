@@ -47,9 +47,7 @@
             alt="create app"
           />
 
-          <p class="step">
-            <span>Step 1:</span> Click on the Applications menu
-          </p>
+          <p class="step"><span>Step 1:</span> Click on APIs menu.</p>
           <img
             src="~/assets/images/getting-started/app-menu.png"
             width="1032"
@@ -100,7 +98,7 @@
         </div>
 
         <div class="tab-content">
-          <p class="step"><span>Step 1:</span> Click on APIS menu.</p>
+          <p class="step"><span>Step 1: </span> Click on APIs menu.</p>
           <img
             src="~/assets/images/getting-started/create-app.png"
             width="1032"
@@ -251,11 +249,44 @@
             alt="access-token-dashboard"
           />
 
-          <p class="step"><span>CONCLUSION</span> <br />Need some help?</p>
           <p class="step">
+            <span style="color: #80bc00">CONCLUSION</span>
+          </p>
+          <p style="margin-top:-23px;margin-bottom:-20px;font-weight: normal">Need some help?</p>
+          <!-- <p class="step">
             Get support now from our team by dropping them an email on
             <a href="mailto:buni@kcbgroup.com">buni@kcbgroup.com</a> or
             <br />log in to the forum <a href="#">here</a> to talk shop with
+            fellow developers.
+          </p> -->
+          <p>
+            Get support now from our team by dropping them an email on
+            <a
+              href="mailto:buni@kcbgroup.com"
+              style="
+                line-height: 0;
+                font-size: 1.25rem;
+                display: inline-block;
+                color: #80bc00;
+              "
+              >buni@kcbgroup.com</a
+            >
+            or log
+            <br />
+            <span>
+              in to the forum
+              <NuxtLink
+                to="/support"
+                style="
+                  line-height: 0;
+                  font-size: 1.25rem;
+                  display: inline-block;
+                  color: #80bc00;
+                "
+                >here</NuxtLink
+              >
+              to talk shop with</span
+            >
             fellow developers.
           </p>
         </div>
